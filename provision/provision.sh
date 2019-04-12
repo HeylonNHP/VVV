@@ -723,6 +723,14 @@ if ! package_install; then
   exit 1
 fi
 
+# Heylon White ---- Install lftp, Ruby 2.6 and WordMove
+sudo apt-get install lftp
+sudo apt-add-repository ppa:brightbox/ruby-ng
+sudo apt-get update
+sudo apt-get install ruby2.6 ruby2.6-dev
+sudo gem install wordmove
+# -----------------------------------------------------
+
 tools_install
 nginx_setup
 mailhog_setup
